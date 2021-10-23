@@ -1,5 +1,8 @@
 # unlock-bath
-A repository to store Team Brown's escape-room style game submission for the Unlock Bath competition. Brief: Bath Medical Museum
+A repository to store Team Brown's escape-room style game submission for the Unlock Bath competition. 
+
+Theme: 
+Bath Medical Museum
 
 Team Members:
 Bisesh Sitaula
