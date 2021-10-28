@@ -2592,6 +2592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 200
+  startingPosition: {fileID: 11400000, guid: f2b5b9a009bbd0041a912306f778a90c, type: 2}
 --- !u!212 &1160167121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -41892,6 +41893,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: GroundFloor
+  playerPosition: {x: 0.1, y: -8}
+  playerStorage: {fileID: 11400000, guid: f2b5b9a009bbd0041a912306f778a90c, type: 2}
 --- !u!1001 &1371570778
 PrefabInstance:
   m_ObjectHideFlags: 0

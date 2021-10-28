@@ -7,11 +7,14 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float _speed = 200;
 
+    public VectorValue startingPosition;
+
     // Start is called before the first frame update
     void Start()
     {
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        transform.position = startingPosition.initalValue;
     }
 
     // Update is called once per frame
