@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
         _rigidBody = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
         transform.position = startingPosition.initalValue;
+        
     }
 
     // Update is called once per frame
@@ -32,5 +33,13 @@ public class PlayerController : MonoBehaviour
             _animator.SetFloat("lastMoveX", Input.GetAxis("Horizontal"));
             _animator.SetFloat("lastMoveY", Input.GetAxis("Vertical"));
         }
+    }
+
+    private void LoadInventory()
+    {
+        Inventory inv = gameObject.GetComponent<Inventory>();
+        inv.slots = PlayerData.Instance.inventory.slots;
+        inv.isFull = PlayerData.Instance.inventory.isFull;
+        inv.itemButtons = PlayerData.Instance.inventory.itemButtons;
     }
 }

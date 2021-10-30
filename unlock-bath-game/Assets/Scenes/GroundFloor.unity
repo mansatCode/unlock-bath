@@ -2456,9 +2456,10 @@ GameObject:
   - component: {fileID: 445362679}
   - component: {fileID: 445362678}
   - component: {fileID: 445362677}
+  - component: {fileID: 445362680}
   m_Layer: 5
   m_Name: Bag
-  m_TagString: Untagged
+  m_TagString: Bag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2503,7 +2504,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.2784314, g: 0.2784314, b: 0.2784314, a: 1}
+    m_NormalColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
     m_HighlightedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
     m_PressedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
     m_SelectedColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
@@ -2562,6 +2563,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 445362680}
+        m_TargetAssemblyTypeName: BagColourController, Assembly-CSharp
+        m_MethodName: toggleBag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &445362678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2600,6 +2613,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445362675}
   m_CullTransparentMesh: 1
+--- !u!114 &445362680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445362675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bb34fffa4ddbdb49bd1f1e66e4f1986, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bagToggled: 1
 --- !u!1 &447849204
 GameObject:
   m_ObjectHideFlags: 0
@@ -14679,6 +14705,8 @@ MonoBehaviour:
   - {fileID: 233109703}
   - {fileID: 1493246494}
   - {fileID: 1787957094}
+  itemButtons: []
+  invToggled: 0
 --- !u!1 &1802755860
 GameObject:
   m_ObjectHideFlags: 0

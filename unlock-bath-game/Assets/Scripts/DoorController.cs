@@ -13,7 +13,6 @@ public class DoorController : MonoBehaviour
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
-        Debug.Log(boxCollider.enabled);
         isOpen = false;
     }
     public void OpenDoor()
@@ -31,6 +30,5 @@ public class DoorController : MonoBehaviour
             isOpen = false;
             boxCollider.enabled = true;
         }
-        Debug.Log(boxCollider.enabled);
     }
 }

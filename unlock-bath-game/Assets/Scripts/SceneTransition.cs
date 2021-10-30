@@ -13,6 +13,7 @@ public class SceneTransition : MonoBehaviour
         {
             playerStorage.initalValue = playerPosition;
             SceneManager.LoadScene(sceneToLoad);
+            PlayerData.Instance.SetInventory();
         }
     }
 }

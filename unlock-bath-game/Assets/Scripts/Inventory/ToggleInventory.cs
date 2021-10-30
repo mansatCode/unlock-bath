@@ -12,9 +12,10 @@ public class ToggleInventory : MonoBehaviour
     
     void Start()
     {
-        invEnabled = false;
+        invEnabled = true;
         image = slot.GetComponent<Image>();
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory.invToggled = invEnabled;
     }
 
     public void toggleVisibility()
@@ -23,6 +24,8 @@ public class ToggleInventory : MonoBehaviour
         toggleItemButtons(invEnabled);
         image.enabled = !invEnabled;
         invEnabled = !invEnabled;
+        inventory.invToggled = invEnabled;
+
     }
 
     private void toggleItemButtons(bool invEnabled)

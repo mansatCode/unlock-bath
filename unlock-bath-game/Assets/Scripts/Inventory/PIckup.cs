@@ -5,11 +5,13 @@ using UnityEngine;
 public class PIckup : MonoBehaviour
 {
     private Inventory inventory;
+    private BagColourController bag;
     public GameObject itemButton;
 
     private void Start()
     { 
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        bag = GameObject.FindGameObjectWithTag("Bag").GetComponent<BagColourController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,6 +27,13 @@ public class PIckup : MonoBehaviour
                     GameObject itemButtonObject = Instantiate(itemButton, inventory.slots[i].transform, false);
                     inventory.itemButtons[i] = itemButtonObject;
                     Destroy(gameObject);
+
+                    //Hides button if bag is not toggled
+                    Debug.Log(inventory.invToggled);
+                    if (!inventory.invToggled)
+                    {
+                        itemButtonObject.SetActive(false);
+                    }
                     break;
                 }
             }
