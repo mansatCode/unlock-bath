@@ -14674,9 +14674,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0267d4d9d8eba4a8526ad618cc2716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFull: 00
+  isFull: 000000
   slots:
   - {fileID: 233109703}
+  - {fileID: 1493246494}
+  - {fileID: 1787957094}
 --- !u!1 &1802755860
 GameObject:
   m_ObjectHideFlags: 0

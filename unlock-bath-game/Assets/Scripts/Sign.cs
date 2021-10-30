@@ -9,23 +9,6 @@ public class Sign : MonoBehaviour
     public string dialog;
     public bool isPlayerInRange;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && isPlayerInRange)
-        {
-            if (dialogBox.activeInHierarchy)
-            {
-                dialogBox.SetActive(false);
-            }
-            else
-            {
-                dialogBox.SetActive(true);
-                dialogText.text = dialog;
-            }
-        }
-    }
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
@@ -47,4 +30,16 @@ public class Sign : MonoBehaviour
         }
     }
 
+    public void ToggleSign()
+    {
+        if (dialogBox.activeInHierarchy)
+        {
+            dialogBox.SetActive(false);
+        }
+        else
+        {
+            dialogBox.SetActive(true);
+            dialogText.text = dialog;
+        }
+    }
 }
