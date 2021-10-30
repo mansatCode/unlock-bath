@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
-    public bool isOpen, isInRange;
+    public bool isOpen, isInRange, isLocked;
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D boxCollider;
     public Sprite open, closed;
+
 
     private void Start()
     {
@@ -17,18 +18,21 @@ public class DoorController : MonoBehaviour
     }
     public void OpenDoor()
     {
-        if (!isOpen && !isInRange)
+        if (!isLocked)
         {
+            if (!isOpen && !isInRange)
+            {
 
-            spriteRenderer.sprite = open;
-            isOpen = true;
-            boxCollider.enabled = false;
-        }
-        else if (isOpen && !isInRange)
-        {
-            spriteRenderer.sprite = closed;
-            isOpen = false;
-            boxCollider.enabled = true;
+                spriteRenderer.sprite = open;
+                isOpen = true;
+                boxCollider.enabled = false;
+            }
+            else if (isOpen && !isInRange)
+            {
+                spriteRenderer.sprite = closed;
+                isOpen = false;
+                boxCollider.enabled = true;
+            }
         }
     }
 }
