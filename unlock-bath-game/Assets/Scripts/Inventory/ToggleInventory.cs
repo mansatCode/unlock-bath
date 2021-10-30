@@ -8,25 +8,31 @@ public class ToggleInventory : MonoBehaviour
     public bool invEnabled;
     public GameObject slot;
     public Image image;
+    private Inventory inventory;
     
     void Start()
     {
         invEnabled = false;
         image = slot.GetComponent<Image>();
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     public void toggleVisibility()
     {
-        if (invEnabled)
+        slot.GetComponent<Image>().enabled = !invEnabled;
+        toggleItemButtons(invEnabled);
+        image.enabled = !invEnabled;
+        invEnabled = !invEnabled;
+    }
+
+    private void toggleItemButtons(bool invEnabled)
+    {
+        foreach (GameObject itemButton in inventory.itemButtons)
         {
-            image.enabled = false; 
-            invEnabled = false;
-        }
-        else
-        {
-            slot.GetComponent<Image>().enabled = true;
-            image.enabled = true;
-            invEnabled = true;
+            if (itemButton != null)
+            {
+                itemButton.SetActive(!invEnabled);
+            }
         }
     }
 }

@@ -22,7 +22,8 @@ public class PIckup : MonoBehaviour
                 {
                     //Add item to inv
                     inventory.isFull[i] = true;
-                    Instantiate(itemButton, inventory.slots[i].transform, false);
+                    GameObject itemButtonObject = Instantiate(itemButton, inventory.slots[i].transform, false);
+                    inventory.itemButtons[i] = itemButtonObject;
                     Destroy(gameObject);
                     break;
                 }
