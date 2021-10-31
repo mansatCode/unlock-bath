@@ -2,5 +2,6 @@ using UnityEngine;
 
 public class isKey : MonoBehaviour
 {
-    public bool key = true;
+    public bool key;
+    public bool potion;
 }

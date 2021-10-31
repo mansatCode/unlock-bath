@@ -6,7 +6,8 @@ public class PIckup : MonoBehaviour
 {
     private Inventory inventory;
     private BagColourController bag;
-    public GameObject itemButton, key;
+    public GameObject itemButton;
+    public bool key, potion;
 
 
     private void Start()
@@ -26,11 +27,20 @@ public class PIckup : MonoBehaviour
                     //Add item to inv
                     inventory.isFull[i] = true;
                     GameObject itemButtonObject = Instantiate(itemButton, inventory.slots[i].transform, false);
-                    if (itemButton == key)
-                    {
-                        itemButtonObject.AddComponent<isKey>();
-                    }
                     inventory.itemButtons[i] = itemButtonObject;
+
+                    itemButtonObject.AddComponent<isKey>();
+                    if (key)
+                    {
+                        itemButtonObject.GetComponent<isKey>().key = true;
+                    } else if (potion)
+                    {
+                        itemButtonObject.GetComponent<isKey>().potion = true;
+                        GameObject.FindGameObjectWithTag("WaterNPC").GetComponent<waterNPC>().waterTaken = true;
+                        GameObject.FindGameObjectWithTag("WaterNPC").GetComponent<waterNPC>().waterSlot = i;
+                    }
+                    
+                    
                     Destroy(gameObject);
 
                     //Hides button if bag is not toggled

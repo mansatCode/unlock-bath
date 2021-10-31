@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6302709617328736727}
   - component: {fileID: 8284003856256110131}
   m_Layer: 5
-  m_Name: Coin Button
+  m_Name: Potion Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 394899dbf2938874ca7d1025f7598406, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b7f77607c82ea4142a2070c0e37e1756, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

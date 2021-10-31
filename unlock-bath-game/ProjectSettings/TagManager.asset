@@ -10,6 +10,8 @@ TagManager:
   - Pillar 3
   - Locked Door
   - MainHallLockedDoor
+  - waterNPCDialog
+  - WaterNPC
   layers:
   - Default
   - TransparentFX
