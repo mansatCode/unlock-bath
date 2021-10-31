@@ -6,7 +6,8 @@ public class PIckup : MonoBehaviour
 {
     private Inventory inventory;
     private BagColourController bag;
-    public GameObject itemButton;
+    public GameObject itemButton, key;
+
 
     private void Start()
     { 
@@ -25,11 +26,15 @@ public class PIckup : MonoBehaviour
                     //Add item to inv
                     inventory.isFull[i] = true;
                     GameObject itemButtonObject = Instantiate(itemButton, inventory.slots[i].transform, false);
+                    if (itemButton == key)
+                    {
+                        itemButtonObject.AddComponent<isKey>();
+                    }
                     inventory.itemButtons[i] = itemButtonObject;
                     Destroy(gameObject);
 
                     //Hides button if bag is not toggled
-                    Debug.Log(inventory.invToggled);
+
                     if (!inventory.invToggled)
                     {
                         itemButtonObject.SetActive(false);
