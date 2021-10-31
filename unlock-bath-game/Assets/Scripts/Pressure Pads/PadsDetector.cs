@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PadsDetector : MonoBehaviour
@@ -30,12 +28,15 @@ public class PadsDetector : MonoBehaviour
 
     public void AddActive()
     {
+        Debug.Log("AddActive called");
         for (int i = 0; i < PadActive.Length; i++)
         {
+            Debug.Log(PadActive[i]);
             if (!PadActive[i])
             {
                 PadActive[i] = true;
                 TurnOnPillars(i);
+                Debug.Log("Pillars activated");
                 CheckUnlocked();
                 return;
             }
@@ -65,13 +66,14 @@ public class PadsDetector : MonoBehaviour
 
     public void RemoveActive()
     {
+        Debug.Log("Remove Active called");
         for (int i = 2; i >= 0; i--)
         {
             if (PadActive[i])
             {
                 PadActive[i] = false;
                 TurnOffPillars(i);
-
+                Debug.Log($"{PadActive[i]}");
                 
                 return;
             }

@@ -9,14 +9,13 @@ public class CodePanel : MonoBehaviour
 
     [SerializeField] GameObject codePanel;
 
-    private bool isActive = true;
+    
     private string codeTextValue = "";
 
     private void Start()
     {
         codePanel.SetActive(false);
     }
-
 
     private void Update()
     {

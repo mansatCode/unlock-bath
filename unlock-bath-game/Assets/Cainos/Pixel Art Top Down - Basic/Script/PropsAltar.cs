@@ -16,14 +16,20 @@ namespace Cainos.PixelArtTopDown_Basic
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            targetColor = new Color(1, 1, 1, 1);
-            PadsDetector.Instance.AddActive();
+            if (other.gameObject.CompareTag("Crate"))
+            {
+                targetColor = new Color(1, 1, 1, 1);
+                PadsDetector.Instance.AddActive();
+            }
         }
 
         private void OnTriggerExit2D(Collider2D other)
         {
-            targetColor = new Color(1, 1, 1, 0);
-            PadsDetector.Instance.RemoveActive();
+            if (other.gameObject.CompareTag("Crate"))
+            {
+                targetColor = new Color(1, 1, 1, 0);
+                PadsDetector.Instance.RemoveActive();
+            }
         }
 
         private void Update()

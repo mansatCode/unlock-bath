@@ -15,6 +15,7 @@ TagManager:
   - WaterNPC
   - GroundDoorLocked1
   - FinalLockedDoor
+  - Crate
   layers:
   - Default
   - TransparentFX

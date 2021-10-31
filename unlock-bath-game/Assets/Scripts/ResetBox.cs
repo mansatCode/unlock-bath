@@ -3,12 +3,13 @@ using UnityEngine;
 public class ResetBox : MonoBehaviour
 {
     private bool inRange;
-
+    private GameObject crate;
     public Vector2 startingPosition;
 
     private void Start()
     {
         startingPosition = this.gameObject.transform.position;
+        crate = this.transform.parent.gameObject;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,9 +32,9 @@ public class ResetBox : MonoBehaviour
     {
         if (inRange)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.R))
             {
-                this.gameObject.transform.position = startingPosition;
+                crate.transform.position = startingPosition;
             }
         }
     }

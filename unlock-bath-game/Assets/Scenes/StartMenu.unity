@@ -1907,7 +1907,16 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\nWASD / Arrow Keys -\nto move around\n\nE - \ninteract key"
+  m_Text: '
+
+    WASD / Arrow Keys -move around
+
+
+    E - interact key
+
+
+    R -
+    reset crate position (must be touching)'
 --- !u!222 &977664910
 CanvasRenderer:
   m_ObjectHideFlags: 0
