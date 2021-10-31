@@ -14,13 +14,15 @@ public class DoorController : MonoBehaviour
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
         isOpen = false;
     }
+
     public void OpenDoor()
     {
+        
         if (!isLocked)
         {
+            Debug.Log("Door changed");
             if (!isOpen && !isInRange)
             {
-
                 spriteRenderer.sprite = open;
                 isOpen = true;
                 boxCollider.enabled = false;
@@ -32,5 +34,12 @@ public class DoorController : MonoBehaviour
                 boxCollider.enabled = true;
             }
         }
+    }
+
+    public void OpenOnce()
+    {
+        spriteRenderer.sprite = open;
+        isOpen = true;
+        boxCollider.enabled = false;
     }
 }

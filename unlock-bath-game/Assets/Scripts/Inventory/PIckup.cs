@@ -29,6 +29,7 @@ public class PIckup : MonoBehaviour
                     if (itemButton == key)
                     {
                         itemButtonObject.AddComponent<isKey>();
+                        itemButtonObject.GetComponent<isKey>().key = true;
                     }
                     inventory.itemButtons[i] = itemButtonObject;
                     Destroy(gameObject);

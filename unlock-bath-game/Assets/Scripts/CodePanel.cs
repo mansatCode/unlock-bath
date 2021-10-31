@@ -5,6 +5,7 @@ public class CodePanel : MonoBehaviour
 {
     public Text codeText;
     public static bool codePanelActive = true;
+    public Signal context;
 
     [SerializeField] GameObject codePanel;
 
@@ -27,6 +28,7 @@ public class CodePanel : MonoBehaviour
             CodeLockDoorController.isLocked = false;
             codePanelActive = false;
             codePanel.SetActive(false);
+            context.Raise();
         }
 
         if (codeTextValue.Length >= 4)

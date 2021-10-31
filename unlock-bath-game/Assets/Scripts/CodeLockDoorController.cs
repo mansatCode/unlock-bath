@@ -9,6 +9,7 @@ public class CodeLockDoorController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public BoxCollider2D boxCollider;
     public Sprite open, closed;
+    public Signal context;
 
     private bool inRange, panelActive;
 
@@ -25,14 +26,18 @@ public class CodeLockDoorController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("69");
             inRange = true;
+        }
+
+        if (isLocked && inRange)
+        {
+            context.Raise();
         }
     }
 
     private void Update()
     {
-        if (inRange)
+        if (inRange && isLocked)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -55,28 +60,16 @@ public class CodeLockDoorController : MonoBehaviour
         }
     }
 
-    /*
-     * if (other.CompareTag("Player") && !other.isTrigger)
-        {
-            Debug.Log("Player entered code door range");
-            if (CodePanel.codePanelActive)
-            {
-                codePanel.SetActive(true);
-            }
-        }
-
-    if (other.CompareTag("Player") && !other.isTrigger)
-        {
-            Debug.Log("Player left code door range");
-            codePanel.SetActive(false);
-        }
-     */
-
     private void OnTriggerExit2D(Collider2D other)
     {
         inRange = false;
         codePanel.SetActive(false);
         panelActive = false;
+
+        if(isLocked)
+        {
+            context.Raise();
+        }
     }
 
     public void OpenDoor()

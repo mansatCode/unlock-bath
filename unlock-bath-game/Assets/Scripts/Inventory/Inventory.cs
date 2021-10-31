@@ -13,6 +13,10 @@ public class Inventory : MonoBehaviour
         itemButtons = new GameObject[3];
     }
 
+    public void clearInventory()
+    {
+        itemButtons = new GameObject[3];
+    }
 }
 
 
