@@ -6,6 +6,9 @@ public class PadsDetector : MonoBehaviour
     public GameObject[][] Pillars;
     public static PadsDetector Instance;
 
+    public Signal context;
+    private bool closeSignal = false;
+
     private void Start()
     {
 
@@ -98,4 +101,5 @@ public class PadsDetector : MonoBehaviour
             p.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
+
 }

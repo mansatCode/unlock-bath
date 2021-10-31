@@ -1,35 +1,35 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class GroundLockedDoor1 : MonoBehaviour
+public class bluedoor : MonoBehaviour
 {
-    private bool keyFound = false;
-    private bool closeSignal = false;
     public Signal context;
+    private bool closeSignal = false;
+
+    public string tag;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
         if (collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("PLAYER ENTERED ");
-            if (GameObject.FindGameObjectWithTag("GroundDoorLocked1").GetComponent<DoorController>().isLocked)
+            if (GameObject.FindGameObjectWithTag(tag).GetComponent<DoorController>().isLocked)
             {
                 context.Raise();
 
                 if (GameObject.FindGameObjectWithTag("Player").GetComponent<GroundFloorKeyCheck>().keyOneObtained)
                 {
-                    GameObject.FindGameObjectWithTag("GroundDoorLocked1").GetComponent<DoorController>().isLocked = false;
+                    GameObject.FindGameObjectWithTag(tag).GetComponent<DoorController>().isLocked = false;
                     closeSignal = true;
                 }
             }
-
-            
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !collision.isTrigger && GameObject.FindGameObjectWithTag("GroundDoorLocked1").GetComponent<DoorController>().isLocked == true)
+        if (collision.CompareTag("Player") && !collision.isTrigger && GameObject.FindGameObjectWithTag(tag).GetComponent<DoorController>().isLocked == true)
         {
             context.Raise();
         }
