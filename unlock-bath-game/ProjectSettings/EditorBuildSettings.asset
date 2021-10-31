@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GroundFloor.unity
     guid: 29d105566014e2e4d893919fd5e1fad1
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: a5e2d7778f738fd4493d67f4c7e94356
   m_configObjects: {}

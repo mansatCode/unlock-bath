@@ -130,6 +130,7 @@ public class waterNPC : MonoBehaviour
 
                 itemButtonObject.AddComponent<isKey>();
                 itemButtonObject.GetComponent<isKey>().key = true;
+                GameObject.FindGameObjectWithTag("Player").GetComponent<GroundFloorKeyCheck>().keyOneObtained = true;
 
                 //Hides button if bag is not toggled
 

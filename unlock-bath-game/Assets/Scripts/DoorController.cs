@@ -20,7 +20,6 @@ public class DoorController : MonoBehaviour
         
         if (!isLocked)
         {
-            Debug.Log("Door changed");
             if (!isOpen && !isInRange)
             {
                 spriteRenderer.sprite = open;

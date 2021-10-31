@@ -11,6 +11,10 @@ TagManager:
   - Locked Door
   - MainHallLockedDoor
   - StairsLockedDoor
+  - waterNPCDialog
+  - WaterNPC
+  - GroundDoorLocked1
+  - FinalLockedDoor
   layers:
   - Default
   - TransparentFX
