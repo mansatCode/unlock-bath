@@ -14,8 +14,11 @@ public class FINALDOOR : MonoBehaviour
             Debug.Log("PLAYER ENTERED ");
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<GroundFloorKeyCheck>().keyTwoObtained)
             {
+                Debug.Log("Key 2 obtained?");
                 GameObject.FindGameObjectWithTag("FinalLockedDoor").GetComponent<DoorController>().isLocked = false;
             }
         }
     }
+
+
 }

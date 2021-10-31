@@ -10,4 +10,9 @@ public class GoldenKeyPickUp : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<GroundFloorKeyCheck>().keyTwoObtained = true;
         }
     }
+
+    private void Update()
+    {
+        GameObject.FindGameObjectWithTag("FinalLockedDoor").GetComponent<DoorController>().isLocked = true;
+    }
 }
