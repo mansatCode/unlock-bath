@@ -65901,7 +65901,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemButton: {fileID: 608417585377961278, guid: 92a6f7df7c753b74dbce23eb8aa2924d,
     type: 3}
-  key: {fileID: 608417585377961278, guid: 92a6f7df7c753b74dbce23eb8aa2924d, type: 3}
+  key: 1
+  potion: 0
 --- !u!212 &1712072115
 SpriteRenderer:
   m_ObjectHideFlags: 0

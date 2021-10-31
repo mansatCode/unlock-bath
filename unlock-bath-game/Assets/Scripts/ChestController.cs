@@ -49,6 +49,7 @@ public class ChestController : MonoBehaviour
                     itemButtonObject.AddComponent<isKey>();
                     itemButtonObject.GetComponent<isKey>().key2 = true;
 
+
                     inventory.itemButtons[i] = itemButtonObject;
 
                     //Hides button if bag is not toggled

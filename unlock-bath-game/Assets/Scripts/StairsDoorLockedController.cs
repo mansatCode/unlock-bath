@@ -46,7 +46,8 @@ public class StairsDoorLockedController : MonoBehaviour
                             return;
                         }
                         Debug.Log("Key2 found");
-                        GameObject.FindGameObjectWithTag("StairsLockedDoor").GetComponent<DoorController>().isLocked = false;     
+                        GameObject.FindGameObjectWithTag("StairsLockedDoor").GetComponent<DoorController>().isLocked = false;
+                        GameObject.FindGameObjectWithTag("StairsLockedDoor").GetComponent<DoorController>().OpenDoor();
                         context.Raise();
                         return;
                     }

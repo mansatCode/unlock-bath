@@ -37,8 +37,8 @@ public class PIckup : MonoBehaviour
                     else if (potion)
                     {
                         itemButtonObject.GetComponent<isKey>().potion = true;
-                        //GameObject.FindGameObjectWithTag("WaterNPC").GetComponent<waterNPC>().waterTaken = true;
-                        //GameObject.FindGameObjectWithTag("WaterNPC").GetComponent<waterNPC>().waterSlot = i;
+                        GameObject.FindGameObjectWithTag("WaterNPC").GetComponent<waterNPC>().waterTaken = true;
+                        GameObject.FindGameObjectWithTag("WaterNPC").GetComponent<waterNPC>().waterSlot = i;
                     }
 
                     Destroy(gameObject);
