@@ -6,6 +6,10 @@ Bath Medical Museum
 
 Team Members:
 Bisesh Sitaula
-Karthik Nandula
 Sam Mansat-Bhattacharyya
-Farahmand Zeidaabadi Nezhad
+
+Play online at:
+https://echogames.co.uk/unlock-bath-2021/team-brown/
+
+Download at:
+https://mansatcode.itch.io/unlock-bath-team-brown
