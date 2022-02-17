@@ -4,7 +4,7 @@ A repository to store Team Brown's escape-room style game submission for the Unl
 Theme: 
 Bath Medical Museum
 
-Team Members:
+Team Members:  
 Bisesh Sitaula  
 Sam Mansat-Bhattacharyya
 
