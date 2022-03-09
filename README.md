@@ -9,7 +9,7 @@ Bisesh Sitaula
 Sam Mansat-Bhattacharyya
 
 Play online at:
-https://echogames.co.uk/unlock-bath-2021/team-brown/
+http://www.echogames.co.uk/escape-the-min/
 
 Download at:
 https://mansatcode.itch.io/unlock-bath-team-brown
